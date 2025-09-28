@@ -30,4 +30,7 @@ const userSelection = result.userSelection.toUpperCase();
   } else {
     computerSelection = "ROCK";
   }
+
+  console.log(`\nYou chose: ${userSelection}`);
+  console.log(`Computer chose: ${computerSelection}\n`);
 });
