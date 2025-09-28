@@ -44,4 +44,6 @@ const userSelection = result.userSelection.toUpperCase();
   ) {
     console.log("User Wins!");
   } else {
+    console.log("Computer Wins!");
+  }
 });
