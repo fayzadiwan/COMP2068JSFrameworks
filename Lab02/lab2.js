@@ -14,7 +14,6 @@ prompt.get(["userSelection"], function (err, result) {
     console.error("Error receiving input");
     return;
   }
+const userSelection = result.userSelection.toUpperCase();
 
-
-  
 });
