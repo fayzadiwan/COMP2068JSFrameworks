@@ -8,3 +8,13 @@ prompt.start();
 
 console.log("Welcome to Rock-Paper-Scissors!");
 console.log("Please choose: ROCK, PAPER, or SCISSORS");
+
+prompt.get(["userSelection"], function (err, result) {
+   if (err) {
+    console.error("Error receiving input");
+    return;
+  }
+
+
+  
+});
