@@ -33,4 +33,8 @@ const userSelection = result.userSelection.toUpperCase();
 
   console.log(`\nYou chose: ${userSelection}`);
   console.log(`Computer chose: ${computerSelection}\n`);
+
+  if (userSelection === computerSelection) {
+    console.log("It's a tie!");
+  } 
 });
