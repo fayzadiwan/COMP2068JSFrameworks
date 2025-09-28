@@ -21,4 +21,13 @@ const userSelection = result.userSelection.toUpperCase();
   return;
   }
 
+  const random = Math.random();
+  let computerSelection = "";
+  if (random <= 0.34) {
+    computerSelection = "PAPER";
+    } else if (random <= 0.67) {
+    computerSelection = "SCISSORS";
+  } else {
+    computerSelection = "ROCK";
+  }
 });
