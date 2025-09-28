@@ -16,4 +16,9 @@ prompt.get(["userSelection"], function (err, result) {
   }
 const userSelection = result.userSelection.toUpperCase();
 
+ if (!choices.includes(userSelection)) {
+  console.log("Invalid choice! Please run again and choose ROCK, PAPER, or SCISSORS.");
+  return;
+  }
+
 });
