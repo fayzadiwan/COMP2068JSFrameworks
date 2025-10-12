@@ -1,0 +1,1 @@
+Controllers folder: router(s) are placed in routes/index.js as required.
