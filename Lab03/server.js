@@ -50,3 +50,13 @@ switch (method.toLowerCase()) {
 res.end(`${x} ${symbol} ${y} = ${result}`);
 
 }
+// Create connect app
+const app = connect();
+
+// Use the calculate function for /lab2 path
+app.use('/lab2', calculate);
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
