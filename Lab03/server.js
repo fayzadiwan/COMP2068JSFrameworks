@@ -17,4 +17,36 @@ function calculate(req, res) {
         return;
 }
 
+// Perform calculation based on method
+let result;
+let symbol;
 
+switch (method.toLowerCase()) {
+  case 'add':
+    result = x + y;
+    symbol = '+';
+    break;
+  case 'subtract':
+    result = x - y;
+    symbol = '-';
+    break;
+  case 'multiply':
+    result = x * y;
+    symbol = '*';
+    break;
+  case 'divide':
+    if (y === 0) {
+      res.end('Error: Cannot divide by zero.');
+      return;
+    }
+    result = x / y;
+    symbol = '/';
+    break;
+  default:
+    res.end('Error: Invalid method. Use add, subtract, multiply, or divide.');
+    return;
+}
+// Display the result
+res.end(`${x} ${symbol} ${y} = ${result}`);
+
+}
