@@ -1,0 +1,13 @@
+<div>
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="error" class="error">{{error}}</div>
+  
+    <label>Title</label><br>
+    <input [(ngModel)]="model.title" /><br><br>
+  
+    <label><input type="checkbox" [(ngModel)]="model.completed" /> Completed</label><br><br>
+  
+    <button (click)="save()">Save</button>
+    <button (click)="router.navigate(['/'])">Cancel</button>
+  </div>
+  
