@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header class="bg-dark text-white p-2">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand text-white" href="/">MyDirectory</a>
+        <nav>
+          {{#if currentUser}}
+            <span class="me-2">Hi, {{currentUser.name}}</span>
+            <a class="btn btn-sm btn-outline-light me-1" href="/items">My Items</a>
+            <a class="btn btn-sm btn-outline-light" href="/auth/logout">Logout</a>
+          {{else}}
+            <a class="btn btn-sm btn-outline-light me-1" href="/auth/login">Login</a>
+            <a class="btn btn-sm btn-outline-light" href="/auth/register">Register</a>
+          {{/if}}
+        </nav>
+      </div>
+    </header>
+
+    <main class="container my-4">
+      {{#if success}}<div class="alert alert-success">{{success}}</div>{{/if}}
+      {{#if error}}<div class="alert alert-danger">{{error}}</div>{{/if}}
+      {{{body}}}
+    </main>
+
+    <footer class="bg-light text-center py-3">
+      <div class="container">
+        <small>&copy; MyDirectory 2025</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
