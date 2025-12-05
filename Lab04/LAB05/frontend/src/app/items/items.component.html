@@ -1,0 +1,13 @@
+<div>
+<h2>Items</h2>
+<input [(ngModel)]="model.name" placeholder="Name">
+<input [(ngModel)]="model.description" placeholder="Description">
+<button (click)="editId ? update() : create()">{{editId?'Update':'Create'}}</button>
+<ul>
+<li *ngFor="let it of items">
+<strong>{{it.name}}</strong> - {{it.description}}
+<button (click)="edit(it)">Edit</button>
+<button (click)="delete(it.id!)">Delete</button>
+</li>
+</ul>
+</div>
